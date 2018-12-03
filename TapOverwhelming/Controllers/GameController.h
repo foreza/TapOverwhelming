@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GameManager.h"
+#import "AdManager.h"
 
-@interface GameController : UIViewController {
+@interface GameController <ASInterstitialViewControllerDelegate> : UIViewController {
     GameManager *gm;
+    AdManager *am;
     BOOL gameIsActive;
 }
 

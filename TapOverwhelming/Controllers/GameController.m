@@ -27,8 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    gm = [GameManager sharedInstance];      // Get the shared singleton instance
-
+    gm = [GameManager sharedInstance];      // Get the shared singleton instance for GameManager
+    am = [AdManager sharedInstance];        // Get the shared singleton instance for AdManager
+    
+    [am preloadRewardedInterstitial:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -100,5 +102,14 @@
    
     
 }
+
+
+#pragma mark - AerServ Interstitial Callbacks (TEMP)
+- (void)interstitialViewControllerAdLoadedSuccessfully:(ASInterstitialViewController*)viewController {
+    NSLog(@"Admanager interstitialViewControllerAdLoadedSuccessfully");
+    [am showRewardedInterstitial:self];
+}
+
+
 
 @end

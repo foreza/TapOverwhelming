@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    gm = [GameManager sharedInstance];      // Get the shared singleton instance
+//    gm = [GameManager sharedInstance];      // Get the shared singleton instance
 }
 
 

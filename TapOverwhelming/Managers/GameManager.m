@@ -21,8 +21,9 @@
     return sharedInstance;
 }
 - (id)init {
+    NSLog(@"GameManager init called");
     if (self = [super init]) {
-        NSLog(@"init called");
+        NSLog(@"GameManager self = [super init]");
         
         _counter = 0.0f;
         _highScore = 0.0f;

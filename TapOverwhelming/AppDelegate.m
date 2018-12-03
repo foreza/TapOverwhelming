@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    // Initialize the ad manager here rather than in the controllers so we don't forget to do so.
+    am = [AdManager sharedInstance];
+    [am initializeAdSDK];
+    
     return YES;
 }
 

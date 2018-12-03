@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdManager.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    AdManager *am;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+
 
 
 @end

@@ -11,6 +11,10 @@
 		9229DDD421B1C95900EAB262 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229DDD321B1C95900EAB262 /* GameManager.m */; };
 		9229DDD821B1FC3900EAB262 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229DDD721B1FC3900EAB262 /* GameController.m */; };
 		9229DDDF21B2000300EAB262 /* LeaderboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229DDDE21B2000300EAB262 /* LeaderboardController.m */; };
+		92ACE2C621B59EA30065D610 /* AdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ACE2C521B59EA30065D610 /* AdManager.m */; };
+		92ACE2C921B5A0E90065D610 /* AerServSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92ACE2C821B5A0E90065D610 /* AerServSDK.framework */; };
+		92ACE2CB21B5A1A70065D610 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92ACE2CA21B5A1A60065D610 /* WebKit.framework */; };
+		92ACE2CD21B5A1B10065D610 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92ACE2CC21B5A1B10065D610 /* libxml2.2.tbd */; };
 		92DEE24C21AF4DA200C70ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE24B21AF4DA200C70ACF /* AppDelegate.m */; };
 		92DEE24F21AF4DA200C70ACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE24E21AF4DA200C70ACF /* ViewController.m */; };
 		92DEE25221AF4DA200C70ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DEE25021AF4DA200C70ACF /* Main.storyboard */; };
@@ -27,6 +31,11 @@
 		9229DDD721B1FC3900EAB262 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		9229DDDD21B2000300EAB262 /* LeaderboardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeaderboardController.h; sourceTree = "<group>"; };
 		9229DDDE21B2000300EAB262 /* LeaderboardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaderboardController.m; sourceTree = "<group>"; };
+		92ACE2C521B59EA30065D610 /* AdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdManager.m; sourceTree = "<group>"; };
+		92ACE2C721B59F140065D610 /* AdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdManager.h; sourceTree = "<group>"; };
+		92ACE2C821B5A0E90065D610 /* AerServSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AerServSDK.framework; sourceTree = "<group>"; };
+		92ACE2CA21B5A1A60065D610 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		92ACE2CC21B5A1B10065D610 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		92DEE24721AF4DA200C70ACF /* TapOverwhelming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapOverwhelming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEE24A21AF4DA200C70ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92DEE24B21AF4DA200C70ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92ACE2CD21B5A1B10065D610 /* libxml2.2.tbd in Frameworks */,
+				92ACE2CB21B5A1A70065D610 /* WebKit.framework in Frameworks */,
+				92ACE2C921B5A0E90065D610 /* AerServSDK.framework in Frameworks */,
 				921F7BB821B0C54400732BDD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,9 +66,36 @@
 		921F7BB621B0C54300732BDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92ACE2CC21B5A1B10065D610 /* libxml2.2.tbd */,
+				92ACE2CA21B5A1A60065D610 /* WebKit.framework */,
+				92ACE2C821B5A0E90065D610 /* AerServSDK.framework */,
 				921F7BB721B0C54400732BDD /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92ACE2BF21B59D9E0065D610 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9229DDDD21B2000300EAB262 /* LeaderboardController.h */,
+				9229DDDE21B2000300EAB262 /* LeaderboardController.m */,
+				9229DDD621B1FC3900EAB262 /* GameController.h */,
+				9229DDD721B1FC3900EAB262 /* GameController.m */,
+				92DEE24D21AF4DA200C70ACF /* ViewController.h */,
+				92DEE24E21AF4DA200C70ACF /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		92ACE2C021B59DBB0065D610 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9229DDD521B1C9FD00EAB262 /* GameManager.h */,
+				9229DDD321B1C95900EAB262 /* GameManager.m */,
+				92ACE2C521B59EA30065D610 /* AdManager.m */,
+				92ACE2C721B59F140065D610 /* AdManager.h */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		92DEE23E21AF4DA100C70ACF = {
@@ -79,16 +118,10 @@
 		92DEE24921AF4DA200C70ACF /* TapOverwhelming */ = {
 			isa = PBXGroup;
 			children = (
-				9229DDDD21B2000300EAB262 /* LeaderboardController.h */,
-				9229DDDE21B2000300EAB262 /* LeaderboardController.m */,
+				92ACE2C021B59DBB0065D610 /* Managers */,
+				92ACE2BF21B59D9E0065D610 /* Controllers */,
 				92DEE24A21AF4DA200C70ACF /* AppDelegate.h */,
 				92DEE24B21AF4DA200C70ACF /* AppDelegate.m */,
-				92DEE24D21AF4DA200C70ACF /* ViewController.h */,
-				92DEE24E21AF4DA200C70ACF /* ViewController.m */,
-				9229DDD621B1FC3900EAB262 /* GameController.h */,
-				9229DDD721B1FC3900EAB262 /* GameController.m */,
-				9229DDD521B1C9FD00EAB262 /* GameManager.h */,
-				9229DDD321B1C95900EAB262 /* GameManager.m */,
 				92DEE25321AF4DA400C70ACF /* Assets.xcassets */,
 				92DEE25021AF4DA200C70ACF /* Main.storyboard */,
 				92DEE25521AF4DA400C70ACF /* LaunchScreen.storyboard */,
@@ -172,6 +205,7 @@
 				9229DDD421B1C95900EAB262 /* GameManager.m in Sources */,
 				92DEE25A21AF4DA400C70ACF /* main.m in Sources */,
 				9229DDDF21B2000300EAB262 /* LeaderboardController.m in Sources */,
+				92ACE2C621B59EA30065D610 /* AdManager.m in Sources */,
 				9229DDD821B1FC3900EAB262 /* GameController.m in Sources */,
 				92DEE24C21AF4DA200C70ACF /* AppDelegate.m in Sources */,
 			);
@@ -315,11 +349,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L36D2F8J6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TapOverwhelming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vartyr.TapOverwhelming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -333,11 +375,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L36D2F8J6M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TapOverwhelming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vartyr.TapOverwhelming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
