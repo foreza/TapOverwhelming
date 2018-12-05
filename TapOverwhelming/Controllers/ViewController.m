@@ -24,7 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    gm = [GameManager sharedInstance];      // Get the shared singleton instance
+    gm = [GameManager sharedInstance];      // Get the shared singleton instance
+    am = [AdManager sharedInstance];          // Get the shared singleton instance
+    
+    
+    
+
+    
+    [self.view addSubview:[am loadInFrame:self.view andShowBanner:self]];
 }
 
 

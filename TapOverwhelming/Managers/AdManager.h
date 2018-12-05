@@ -16,12 +16,14 @@
 @interface AdManager: NSObject
 
 // AerServ / IM ad views
-//@property(nonatomic, strong) ASAdView* asAdView; // for banner
+@property(nonatomic, strong) ASAdView* asAdView; // for banner
  @property(nonatomic, strong) ASInterstitialViewController* asInterstitialVC;
 
 // String constants
 extern NSString *const AppID;
 extern NSString *const InterstitialPLC;
+extern NSString *const BottomBannerPLC;
+extern NSString *const MRECBannerPLC;
 
 
 + (id)sharedInstance;
@@ -31,12 +33,10 @@ extern NSString *const InterstitialPLC;
 - (void) preloadRewardedInterstitial:(id)context;
 - (void) showRewardedInterstitial:(id)context;
 
-
-//- (float) getCounter;
-//- (void) resetCounter;
-//- (void) updateHighScore;
-//- (float) returnHighScore;
-
+- (id) getBannerReference;
+- (id) loadInFrame:(UIView*)frame andShowBanner:(id)context;
+- (void) preloadBanner:(id)context;
+- (void) showBanner:(id)context;
 
 @end
 

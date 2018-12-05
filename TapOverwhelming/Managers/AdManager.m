@@ -11,6 +11,11 @@
 // Define our params here temporarily
 NSString *const AppID = @"380000";
 NSString *const InterstitialPLC = @"380003";
+NSString *const BottomBannerPLC = @"380000";
+NSString *const MRECBannerPLC = @"380003";
+
+
+#define kPredefinedBannerAdSize 60.0f
 
 @implementation AdManager
 
@@ -55,6 +60,58 @@ NSString *const InterstitialPLC = @"380003";
 - (void) showRewardedInterstitial:(id)context{
     NSLog(@"Admanager showRewardedInterstitial");
     [self.asInterstitialVC showFromViewController:context];
+}
+
+
+
+
+- (id) getBannerReference {
+    return _asAdView;
+}
+
+- (id) loadInFrame:(UIView*)frame andShowBanner:(id)context{
+    
+    NSLog(@"Admanager loadAndShowBanner");
+    self.asAdView = [ASAdView viewWithPlacementID:BottomBannerPLC andAdSize:ASBannerSize];
+    self.asAdView.delegate = context;
+    [self.asAdView loadAd];
+    
+
+    if(_asAdView != nil) {
+        CGFloat viewWidth = 0.0f, viewHeight = 0.0f, xPosOffset = 0.0f, yPosOffset = -50.0f;
+        if(kIS_iOS_11_OR_LATER) {
+            xPosOffset = frame.safeAreaLayoutGuide.layoutFrame.origin.x;
+            yPosOffset = frame.safeAreaLayoutGuide.layoutFrame.origin.y;
+            viewWidth = frame.safeAreaLayoutGuide.layoutFrame.size.width;
+            viewHeight = frame.safeAreaLayoutGuide.layoutFrame.size.height;
+        } else {
+            viewWidth = frame.frame.size.width;
+            viewHeight = frame.frame.size.height;
+        }
+        
+        CGFloat bannerFrameWidth = frame.frame.size.width;
+        CGFloat xPos = (bannerFrameWidth > viewWidth) ? xPosOffset : xPosOffset + ((viewWidth - bannerFrameWidth)/2);
+        CGFloat yPos = yPosOffset + viewHeight - kPredefinedBannerAdSize;
+        _asAdView.frame = CGRectMake(xPos, yPos, bannerFrameWidth, kPredefinedBannerAdSize);
+    
+    
+
+}
+        return _asAdView;
+}
+
+- (void) preloadBanner:(id)context{
+    
+    NSLog(@"Admanager preloadBanner");
+    self.asAdView = [ASAdView viewWithPlacementID:BottomBannerPLC andAdSize:ASBannerSize];
+    self.asAdView.delegate = context;
+    [self.asAdView loadAd];
+    
+}
+
+- (void) showBanner:(id)context{
+    NSLog(@"Admanager showBanner");
+    
 }
 
 

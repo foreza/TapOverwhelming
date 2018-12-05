@@ -31,6 +31,7 @@
     am = [AdManager sharedInstance];        // Get the shared singleton instance for AdManager
     
     [am preloadRewardedInterstitial:self];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
